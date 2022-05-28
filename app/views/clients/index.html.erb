@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Clientes</h1>
+
+<%= link_to "Nuevo Cliente", new_client_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Teléfono</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @clients.each do |client| %>
+    <tr>
+      <td><%= client.name %></td>
+      <td><%= client.email %></td>
+      <td><%= client.phone %></td>
+      <td><%= link_to "Ver", client %></td>
+      <td> | </td>
+      <td><%= link_to "Editar", edit_client_path(client) %></td>
+      <td> | </td>
+      <td><%= link_to "Borrar", client, data: { "turbo-method": :delete } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
