@@ -1,0 +1,45 @@
+<h1>Ficha Mascota</h1>
+
+<div id="<%= dom_id pet %>">
+  <p>
+    <strong>Nombre:</strong>
+    <%= pet.name %>
+  </p>
+
+  <p>
+    <strong>Raza:</strong>
+    <%= pet.race %>
+  </p>
+
+  <p>
+    <strong>Cumpleaños:</strong>
+    <%= pet.birthday %>
+  </p>
+
+  <p>
+    <strong>Cliente:</strong>
+    <%= pet.client_id %>
+  </p>
+
+</div>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Peso Promedio</th>
+        <th>Altura Promedio</th>
+        <th>Peso Máximo</th>
+        <th>Altura Máxima</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= pet.avg_weight %></td>
+        <td><%= pet.avg_height %></td>
+        <td><%= pet.max_weight %></td>
+        <td><%= pet.max_height %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

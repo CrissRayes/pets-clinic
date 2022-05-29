@@ -1,6 +1,13 @@
+<h1>Ficha Cliente</h1>
+
 <div id="<%= dom_id client %>">
   <p>
-    <strong>Name:</strong>
+    <strong>id:</strong>
+    <%= client.id %>
+  </p>
+
+  <p>
+    <strong>Nombre:</strong>
     <%= client.name %>
   </p>
 
@@ -10,8 +17,13 @@
   </p>
 
   <p>
-    <strong>Phone:</strong>
+    <strong>Teléfono:</strong>
     <%= client.phone %>
+  </p>
+
+  <p>
+    <strong>Cant. Mascotas:</strong>
+    <%= client.pets_count %>
   </p>
 
 </div>

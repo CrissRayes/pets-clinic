@@ -1,0 +1,10 @@
+<h1>Editar Mascota</h1>
+
+<%= render "form", pet: @pet %>
+
+<br>
+
+<div>
+  <%= link_to "Ver", client_pet_path(@client, @pet) %> |
+  <%= link_to "Volver a Mascotas", client_pets_path(@client) %>
+</div>

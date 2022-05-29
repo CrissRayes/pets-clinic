@@ -3,7 +3,8 @@
 <%= render @client %>
 
 <div>
-  <%= link_to "Editar", edit_client_path(@client) %> |
-  <%= link_to "Volver a Clientes", clients_path %>
+  <%= link_to "Editar Cliente", edit_client_path(@client) %> |
+  <%= link_to "Ver Mascotas", client_pets_path(@client) %> | 
+  <%= link_to "Volver a Clientes", clients_path %> 
 
 </div>

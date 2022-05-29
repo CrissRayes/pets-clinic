@@ -13,6 +13,7 @@ class ClientsController < ApplicationController
   # GET /clients/new
   def new
     @client = Client.new
+    @client.pets.build
   end
 
   # GET /clients/1/edit
@@ -65,6 +66,6 @@ class ClientsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def client_params
-      params.require(:client).permit(:name, :email, :phone)
+      params.require(:client).permit(:name, :email, :phone, pets_attributes:[:id, :name, :race, :birthday])
     end
 end
