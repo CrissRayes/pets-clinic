@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  controldate: 2022-05-30
+  wheight: 1.5
+  height: 1.5
+  description: MyText
+  pet: one
+
+two:
+  controldate: 2022-05-30
+  wheight: 1.5
+  height: 1.5
+  description: MyText
+  pet: two

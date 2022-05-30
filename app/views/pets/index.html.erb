@@ -9,20 +9,20 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>Cliente id</th>
           <th>Nombre</th>
           <th>Raza</th>
           <th>Cumpleaños</th>
+          <th>Visitas</th>
           <th colspan="3"></th>
         </tr>
       </thead>
       <tbody>
         <% @pets.each do |pet| %>
           <tr>
-            <td><%= pet.client_id %></td>
             <td><%= pet.name %></td>
             <td><%= pet.race %></td>
             <td><%= pet.birthday %></td>
+            <td><%= pet.history_count %></td>
             <td><%= link_to "Ver", client_pet_path(@client, pet) %></td>
             <td><%= link_to "Editar", edit_client_pet_path(@client, pet) %></td>
             <td><%= link_to "Eliminar", client_pet_path(@client, pet), data: { "turbo-method": :delete } %></td>

@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Historias</h1>
+
+<%= link_to "Nueva Historia", new_history_path %>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Mascota</th>
+        <th>Fecha</th>
+        <th>Peso</th>
+        <th>Altura</th>
+        <th>Descripción</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @histories.each do |history| %>
+        <tr>
+          <td><%= history.pet.name %></td>
+          <td><%= history.controldate %></td>
+          <td><%= history.wheight %></td>
+          <td><%= history.height %></td>
+          <td><%= history.description %></td>
+          <td><%= link_to "Ver", history %></td>
+          <td><%= link_to "Editar", edit_history_path(history) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
